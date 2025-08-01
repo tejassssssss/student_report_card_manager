@@ -1,5 +1,3 @@
-# main.py
-
 from student import Student
 from data_manager import save_students, load_students
 
@@ -35,14 +33,14 @@ def update_score():
     student_id = input("Enter student ID to update: ")
     student = find_student_by_id(student_id)
     if not student:
-        print("❌ Student not found.")
+        print("Student not found.")
         return
 
     subject = input("Enter subject to update: ")
     try:
         score = float(input(f"Enter new score for {subject}: "))
         student.update_score(subject, score)
-        print("✅ Score updated.")
+        print("Score updated.")
     except ValueError:
         print("Invalid score input.")
 
@@ -68,12 +66,12 @@ def delete_student():
     students = [s for s in students if s.id != student_id]
     after_count = len(students)
     if before_count == after_count:
-        print("❌ No such student found.")
+        print("No such student found.")
     else:
-        print("✅ Student deleted.")
+        print("Student deleted.")
 
 def main():
-    print("\n📘 Welcome to Student Report Card Manager 📘")
+    print("\nWelcome to Student Report Card Manager")
     while True:
         print("\nChoose an option:")
         print("1. Add Student")
@@ -94,7 +92,7 @@ def main():
             delete_student()
         elif choice == '5':
             save_students(students)
-            print("💾 Data saved to grades.json. Goodbye!")
+            print("Data saved to grades.json. Goodbye!")
             break
         else:
             print("Invalid choice. Please enter 1–5.")

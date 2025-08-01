@@ -1,4 +1,3 @@
-# test_save_load.py
 from student import Student
 from data_manager import save_students, load_students
 

@@ -1,4 +1,3 @@
-# test_student.py
 from student import Student
 
 # create a sample student

@@ -1,4 +1,3 @@
-# data_manager.py
 import json
 from student import Student
 
@@ -17,5 +16,5 @@ def load_students(filename="grades.json"):
     except FileNotFoundError:
         return []
     except json.JSONDecodeError:
-        print("❌ Error: grades.json is not a valid JSON file. Resetting it.")
+        print("Error: grades.json is not a valid JSON file. Resetting it.")
         return []
